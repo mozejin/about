@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #333;
+  line-height: 1.5;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 50px auto;
+  padding: 50px 50px;
+  position: relative;
+  background: #fff;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #22d3ee, #0ea5e9);
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  transform: rotate(-3deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/*信息开始  */
+.information {
+  display: flex;
+}
+
+.gray {
+  color: gray;
+}
+.information .right {
+  height: 170px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.information .left {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 20px 250px 60px 100px;
+  column-gap: 10px;
+}
+
+.information .left a {
+  color: #0ea5e9;
+}
+
+.information .left .name {
+  grid-area: 1/1/2/5;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.information .left .name .deng {
+  font-size: 28px;
+  padding-right: 10px;
+}
+
+.information .left .gray {
+  text-align: right;
+}
+
+/* 个人经历开始 */
+.same {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.same::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
+}
+
+.message span {
+  color: #333;
+}
+
+.time-line {
+  border-left: 2px solid #22d3ee;
+  padding: 25px 0;
+}
+
+/* .time-line {
+  position: relative;
+}
+.time-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 140px;
+  background: #22d3ee;
+} */
+
+.time-line .message {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.time-line .message::after {
+  content: '';
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #22d3ee;
+  position: absolute;
+  left: -8px;
+  top: 2px;
+}
+
+.time-line .message .detail {
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+/* 专业技能 */
+.skill .percen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 55px;
+}
+
+.skill .percen div {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background: #f0fdff;
+  text-align: center;
+  line-height: 130px;
+  position: relative;
+}
+
+.skill .percen div::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  border: 5px solid #c3f1f8;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.skill .percen .leval1::after {
+  border-top: 5px solid #0ea5e9;
+}
+
+.skill .percen .leval2::after {
+  border-top: 5px solid #0ea5e9;
+  border-right: 5px solid #0ea5e9;
+}
+
+.skill .percen .leval3::after {
+  border-top: 5px solid #0ea5e9;
+  border-right: 5px solid #0ea5e9;
+  border-bottom: 5px solid #0ea5e9;
+}
+.skill .percen .leval4::after {
+  border: 5px solid #0ea5e9;
+}
+
+/* 项目经验 */
+.project .projects {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  letter-spacing: 1.3px;
+  row-gap: 10px;
+  margin: 20px 0;
+}
+
+.project .projects h3 {
+  grid-area: 1/1/2/3;
+}
+
+.project .projects p {
+  margin-bottom: 10px;
+}
+.project .projects a {
+  color: #0ea5e9;
+}
+
+/* 个人评价 */
+.appraise .detail {
+  font-size: 16px;
+  line-height: 2em;
+  margin: 20px 0;
+}
